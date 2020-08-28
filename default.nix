@@ -1,4 +1,6 @@
-{ pkgs ? import <nixpkgs> { }, dlspkgs ? import <dlspkgs> { } }:
+{ pkgs ? import <nixpkgs> { }, dlspkgs ?
+  import (fetchTarball "https://github.com/hir12111/dlspkgs/tarball/master") { }
+}:
 with pkgs;
 let
   entrypoint = writeScript "entrypoint.sh" ''
