@@ -38,8 +38,13 @@ in dockerTools.buildImage {
     EntryPoint = [ entrypoint ];
     User = "epics_user";
     ExposedPorts = {
+      "5075/tcp" = { };
+      "5076/udp" = { };
       "6064/tcp" = { };
       "6064/udp" = { };
+      "6065/tcp" = { };
+      "6065/udp" = { };
+      "6075/tcp" = { };
       "7001/tcp" = { };
       "7002/tcp" = { };
       "8008/tcp" = { };
