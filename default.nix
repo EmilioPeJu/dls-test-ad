@@ -6,8 +6,8 @@ let
   entrypoint = writeScript "entrypoint.sh" ''
     #!${runtimeShell}
     export USER=epics_user
-    ${dlspkgs.procServ}/bin/procServ -q -n ioc -i ^D^C --allow 7001 /bin/TS-EA-IOC-01.sh
-    ${dlspkgs.procServ}/bin/procServ -q -n malcolm -i ^D^C --allow 7002 /bin/TS-ML-MALC-01
+    ${dlspkgs.procServ}/bin/procServ -q -n ioc -i ^D^C --allow 7011 /bin/TS-EA-IOC-01.sh
+    ${dlspkgs.procServ}/bin/procServ -q -n malcolm -i ^D^C --allow 7012 /bin/TS-ML-MALC-01
     # wait forever
     tail -f /dev/null
   '';
